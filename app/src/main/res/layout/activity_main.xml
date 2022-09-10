@@ -4,15 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/helloGoodByeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="@string/hello"
+        android:textColor="@color/dusty_rose"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/helloImage"
+        android:layout_width="360dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helloGoodByeText"
+        app:srcCompat="@drawable/hello" />
+
+    <ImageView
+        android:id="@+id/goodbyeImage"
+        android:visibility="invisible"
+        android:layout_width="360dp"
+        android:layout_height="443dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helloGoodByeText"
+        app:srcCompat="@drawable/goodbye" />
+
+    <ImageView
+        android:id="@+id/buttonBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloImage"
+        app:layout_constraintVertical_bias="0.514"
+        app:srcCompat="@drawable/button" />
+
+    <Button
+        android:id="@+id/imageSwitchButton"
+        android:layout_width="217dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="93dp"
+        android:background="@color/transparent"
+        android:text="@string/button_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/buttonBackground"
+        app:layout_constraintStart_toStartOf="@id/buttonBackground"
+        app:layout_constraintTop_toTopOf="@id/buttonBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
